@@ -160,4 +160,236 @@ span{
   .btn:hover::before {
     width: 160%;
   }
-  
+  .about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--snd-bg-color);
+
+  }
+  .about-img img{
+    width: 35vm;
+  }
+  .heading{
+    text-align: center;
+    font-size: 4.5rem;
+
+  }
+  .about-content h2{
+    text-align: left;
+    line-height: 1.2;
+
+
+  }
+  .about-content h3{
+    font-size: 2.6rem;
+  }
+ .about-content p{
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+ }
+  /*  */
+  .card {
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .image {
+  transform: scale(1);
+}
+
+.info-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(195, 76, 50, 0.8);
+  opacity: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 16px;
+  transition: opacity 0.3s, bottom 0.3s;
+}
+
+.card:hover .info-overlay {
+  opacity: 1;
+}
+
+.info {
+  transform: translateY(40px);
+  transition: transform 0.3s;
+}
+
+.card:hover .info {
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.description {
+  font-size: 14px;
+  color: white;
+  margin-top: 8px;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.learn-more .chevrons-right {
+  margin-left: 8px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, #c34c32, rgba(255, 255, 255, 0));
+  padding: 16px;
+  text-align: center;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s, bottom 0.3s;
+}
+
+.card:hover .footer {
+  opacity: 0;
+  bottom: -20px;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer-description {
+  font-size: 14px;
+}
+/* Contact Section Styling */
+.contact {
+  background-color: var(--snd-bg-color);
+  padding: 4rem 9%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact .heading span {
+  color: var(--main-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 1rem;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  background-color: var(--snd-bg-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  padding: 1rem 2rem;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: transparent;
+  color: var(--main-color);
+  box-shadow: 0 0 0.5rem var(--main-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contact .heading {
+      font-size: 2.5rem;
+  }
+
+  .contact-form input, .contact-form textarea {
+      font-size: 1rem;
+  }
+
+  .contact-form button {
+      font-size: 1.3rem;
+  }
+}
+.project-container{
+  display: flex;
+  gap: 2rem;
+}
