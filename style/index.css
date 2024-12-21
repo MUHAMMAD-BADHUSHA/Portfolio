@@ -268,7 +268,50 @@ span{
     font-size: 2rem;
     color: var(--snd-bg-color);
   }
+  /* Skill section */
+  .skills {
+    padding: 20px; /* Padding around the section */
+    height: 150px;
+    justify-content: center; /* Centers the container horizontally */
+    flex-wrap: wrap; /* Allows wrapping of cards when screen is smaller */
+    gap: 20px; /* Space between cards */
+   
+}
+.skill h2{
+  align-items: center;
+}
+.skills-container {
+  height: 200px;
+  display: flex;
+  justify-content: center; /* Centers the cards within the container */
+  flex-wrap: wrap; /* Wraps the cards to the next line when needed */
+  gap: 20px; /* Space between the cards */
+}
+.skill-card {
+  background-color:var(--bg-color); /* Light grey background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  margin-top: 40px;
+  border: 1.5rem;
   
+  text-align: center; /* Center text inside the card */
+  width: 150px; /* Default width of the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+.skill-card i {
+  font-size: 40px; /* Icon size */
+  color:var(--main-color); /* HTML5 orange color */
+}
+.skill-card h2 {
+  margin-top: 10px; /* Space between the icon and the text */
+  font-size: 18px; /* Font size for the text */
+  color: #f5f3f3; /* Dark grey color for the text */
+}
+.skill-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  border: 2px solid var(--main-color);
+}
 /* Contact Section  */
 .contact {
   background-color: var(--snd-bg-color);
@@ -359,6 +402,7 @@ span{
   html {
     font-size: 55%;
   }
+ 
 }
 
 @media(max-width:991px){
@@ -400,6 +444,10 @@ span{
   .home{
     flex-direction: column;
 
+
+  }
+  .home-content{
+    order: 2;
   }
   .home-content h3{
     font-size: 2rem;
@@ -410,7 +458,7 @@ span{
 
   }
   .home-image img{
-    width:300px;
+    width:70vm;
     margin-top: 4rem;
   }
   .about{
@@ -424,4 +472,33 @@ span{
   .project-container{
     grid-template-columns: repeat(1 ,1fr);
   }
+}
+@media(max-width:617px){
+  .project-container{
+    grid-template-columns: 1fr;
+  }
+  .home-image img{
+    width: 90vm;
+    margin-top: 7rem;
+  }
+
+
+}
+.footer {
+  background-color:var(--bg-color); /* Dark background for the footer */
+  color: #f5f3f3; /* Light color for the text */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add padding inside the footer */
+  position: relative; /* Ensure footer is at the bottom of the page */
+  bottom: 0;
+  width: 100%; /* Make the footer span the entire width */
+}
+
+.footer p {
+  margin: 0; /* Remove any default margin */
+  font-size: 16px; /* Adjust font size */
+}
+
+#year {
+  font-weight: bold; /* Make the year bold */
 }

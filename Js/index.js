@@ -1,3 +1,6 @@
+// Get the current year and display it
+document.getElementById("year").textContent = new Date().getFullYear();
+
 // let numeIcon = document.querySelector('#menu-icon')
 // let navbar =document.querySelector('.navbar')
 
